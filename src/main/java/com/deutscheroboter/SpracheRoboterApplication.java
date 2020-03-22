@@ -1,13 +1,13 @@
-package org.zeitgeistonline.deutschesiri;
+package com.deutscheroboter;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DeutscheSiriApplication {
+public class SpracheRoboterApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DeutscheSiriApplication.class, args);
+		SpringApplication.run(SpracheRoboterApplication.class, args);
 	}
 
 }

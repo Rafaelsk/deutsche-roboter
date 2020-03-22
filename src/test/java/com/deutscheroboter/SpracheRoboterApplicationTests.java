@@ -1,10 +1,10 @@
-package org.zeitgeistonline.deutschesiri;
+package com.deutscheroboter;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DeutscheSiriApplicationTests {
+class SpracheRoboterApplicationTests {
 
 	@Test
 	void contextLoads() {
