@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Main-Class: org.springframework.boot.loader.JarLauncher
-Start-Class: org.zeitgeistonline.deutschesiri.DeutscheSiriApplication
+Start-Class: com.deutscheroboter.SpracheRoboterApplication
 Spring-Boot-Version: 2.2.5.RELEASE
 Spring-Boot-Classes: BOOT-INF/classes/
 Spring-Boot-Lib: BOOT-INF/lib/
