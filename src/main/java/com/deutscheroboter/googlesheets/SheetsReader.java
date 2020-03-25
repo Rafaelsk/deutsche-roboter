@@ -9,7 +9,7 @@ import org.springframework.web.client.HttpClientErrorException;
 @Service
 public class SheetsReader {
 
-    private static final String API_KEY = "AIzaSyC9zfFRlNLqFDvim3RqhvHFmn09qD8TGDw";
+    private static final String API_KEY = "";
 
     @Autowired
     private RestService restService;
