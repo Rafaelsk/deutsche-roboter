@@ -9,7 +9,7 @@ import org.springframework.web.client.HttpClientErrorException;
 
 @Service
 public class SheetsReader {
-    
+
     @Value("${GOOGLE_API_KEY}")
     private String apiKey;
 
