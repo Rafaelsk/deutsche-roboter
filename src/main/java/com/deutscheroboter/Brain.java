@@ -1,15 +1,15 @@
 package com.deutscheroboter;
 
 import com.deutscheroboter.googlesheets.SheetsReader;
+import com.deutscheroboter.models.QuestionResponse;
 import com.deutscheroboter.models.SheetIDEntry;
+import com.deutscheroboter.models.SheetIdResponse;
 import com.deutscheroboter.models.SheetResponse;
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpClientErrorException;
 
-import java.lang.reflect.Type;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -17,14 +17,13 @@ import java.util.stream.Collectors;
 public class Brain {
 
     private static final Gson gson = new Gson();
-    private static final Type nestedLIstType = new TypeToken<ArrayList<ArrayList<String>>>(){}.getType();
     private static final Random rand = new Random();
 
     @Autowired
     private SheetsReader sheetsReader;
 
     public String getSheetIds() {
-        return sheetsReader.read("1CDBVrdywYWqNGddWYLObqxv1ta9cyIYwhbV4wlgqhGs", "Sheet1!A1:C4");
+        return sheetsReader.read("1CDBVrdywYWqNGddWYLObqxv1ta9cyIYwhbV4wlgqhGs", "Sheet1!A2:E5");
     }
 
     public List<SheetIDEntry> getSheetIdEntries() {
@@ -37,9 +36,9 @@ public class Brain {
         return idEntries;
     }
 
-    public List<String> getIds() {
+    public List<SheetIdResponse> getIds() {
         return getSheetIdEntries().stream()
-                .map(SheetIDEntry::getSheetId)
+                .map(SheetIdResponse::fromSheetIdEntry)
                 .collect(Collectors.toList());
     }
 
@@ -73,11 +72,10 @@ public class Brain {
         return map;
     }
 
-    public String answer(String sheetId, String question) {
+    public QuestionResponse answer(String sheetId, String question) {
         Map<String, String> qAndA = getQAndA(sheetId);
-        System.out.println(question);
         System.out.println(qAndA);
-        return qAndA.get(question);
+        return new QuestionResponse(question, qAndA.get(question));
     }
 
 }

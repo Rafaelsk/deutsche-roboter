@@ -1,143 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="Robot">
 <head>
     <meta charset="UTF-8">
-    <title>Sprache Roboter</title>
-    <link>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-dateFormat/1.0/jquery.dateFormat.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style/custom.css">
-    <script src="js/script.js"></script>
+    <title>Sprachroboter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.21/angular-material.min.css">
+    <link rel="stylesheet" href="/style/style.css">
 </head>
-<body>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.8-fix/jquery.nicescroll.min.js"></script>
-    <div class="content container-fluid bootstrap snippets">
-        <div class="row row-broken">
-            <div class="col-sm-12 col-xs-12 chat" style="overflow: hidden; outline: none;" tabindex="5001">
-                <div class="col-inside-lg decor-default">
-                    <div class="chat-body">
-                        <!--<div class="answer left">-->
-                        <!--  <div class="avatar">-->
-                        <!--    <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="User name">-->
-                        <!--    <div class="status offline"></div>-->
-                        <!--  </div>-->
-                        <!--  <div class="name">Alexander Herthic</div>-->
-                        <!--  <div class="text">-->
-                        <!--    Lorem ipsum dolor amet, consectetur adipisicing elit Lorem ipsum dolor amet, consectetur adipisicing elit Lorem ipsum dolor amet, consectetur adiping elit-->
-                        <!--  </div>-->
-                        <!--  <div class="time">5 min ago</div>-->
-                        <!--</div>-->
-                        <!--<div class="answer right">-->
-                        <!--  <div class="avatar">-->
-                        <!--    <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="User name">-->
-                        <!--    <div class="status offline"></div>-->
-                        <!--  </div>-->
-                        <!--  <div class="name">Alexander Herthic</div>-->
-                        <!--  <div class="text">-->
-                        <!--    Lorem ipsum dolor amet, consectetur adipisicing elit Lorem ipsum dolor amet, consectetur adipisicing elit Lorem ipsum dolor amet, consectetur adiping elit-->
-                        <!--  </div>-->
-                        <!--  <div class="time">5 min ago</div>-->
-                        <!--</div>-->
-                        <!--<div class="answer left">-->
-                        <!--  <div class="avatar">-->
-                        <!--    <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="User name">-->
-                        <!--    <div class="status online"></div>-->
-                        <!--  </div>-->
-                        <!--  <div class="name">Alexander Herthic</div>-->
-                        <!--  <div class="text">-->
-                        <!--    ...-->
-                        <!--  </div>-->
-                        <!--  <div class="time">5 min ago</div>-->
-                        <!--</div>-->
-                        <!--<div class="answer right">-->
-                        <!--  <div class="avatar">-->
-                        <!--    <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="User name">-->
-                        <!--    <div class="status busy"></div>-->
-                        <!--  </div>-->
-                        <!--  <div class="name">Alexander Herthic</div>-->
-                        <!--  <div class="text">-->
-                        <!--    It is a long established fact that a reader will be. Thanks Mate!-->
-                        <!--  </div>-->
-                        <!--  <div class="time">5 min ago</div>-->
-                        <!--</div>-->
-                        <!--<div class="answer right">-->
-                        <!--  <div class="avatar">-->
-                        <!--    <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="User name">-->
-                        <!--    <div class="status off"></div>-->
-                        <!--  </div>-->
-                        <!--  <div class="name">Alexander Herthic</div>-->
-                        <!--  <div class="text">-->
-                        <!--    It is a long established fact that a reader will be. Thanks Mate!-->
-                        <!--  </div>-->
-                        <!--  <div class="time">5 min ago</div>-->
-                        <!--</div>-->
-                        <!--<div class="answer left">-->
-                        <!--  <div class="avatar">-->
-                        <!--    <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="User name">-->
-                        <!--    <div class="status offline"></div>-->
-                        <!--  </div>-->
-                        <!--  <div class="name">Alexander Herthic</div>-->
-                        <!--  <div class="text">-->
-                        <!--    Lorem ipsum dolor amet, consectetur adipisicing elit Lorem ipsum dolor amet, consectetur adipisicing elit Lorem ipsum dolor amet, consectetur adiping elit-->
-                        <!--  </div>-->
-                        <!--  <div class="time">5 min ago</div>-->
-                        <!--</div>-->
-                        <!--<div class="answer right">-->
-                        <!--  <div class="avatar">-->
-                        <!--    <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="User name">-->
-                        <!--    <div class="status offline"></div>-->
-                        <!--  </div>-->
-                        <!--  <div class="name">Alexander Herthic</div>-->
-                        <!--  <div class="text">-->
-                        <!--    Lorem ipsum dolor amet, consectetur adipisicing elit Lorem ipsum dolor amet, consectetur adipisicing elit Lorem ipsum dolor amet, consectetur adiping elit-->
-                        <!--  </div>-->
-                        <!--  <div class="time">5 min ago</div>-->
-                        <!--</div>-->
-                        <!--<div class="answer left">-->
-                        <!--  <div class="avatar">-->
-                        <!--    <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="User name">-->
-                        <!--    <div class="status online"></div>-->
-                        <!--  </div>-->
-                        <!--  <div class="name">Alexander Herthic</div>-->
-                        <!--  <div class="text">-->
-                        <!--    ...-->
-                        <!--  </div>-->
-                        <!--  <div class="time">5 min ago</div>-->
-                        <!--</div>-->
-                        <!--<div class="answer right">-->
-                        <!--  <div class="avatar">-->
-                        <!--    <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="User name">-->
-                        <!--    <div class="status busy"></div>-->
-                        <!--  </div>-->
-                        <!--  <div class="name">Alexander Herthic</div>-->
-                        <!--  <div class="text">-->
-                        <!--    It is a long established fact that a reader will be. Thanks Mate!-->
-                        <!--  </div>-->
-                        <!--  <div class="time">5 min ago</div>-->
-                        <!--</div>-->
-                        <!--<div class="answer right">-->
-                        <!--  <div class="avatar">-->
-                        <!--    <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="User name">-->
-                        <!--    <div class="status off"></div>-->
-                        <!--  </div>-->
-                        <!--  <div class="name">Alexander Herthic</div>-->
-                        <!--  <div class="text">-->
-                        <!--    It is a long established fact that a reader will be. Thanks Mate!-->
-                        <!--  </div>-->
-                        <!--  <div class="time">5 min ago</div>-->
-                        <!--</div>-->
-                        <div id="chat-messages"></div>
-                        <div class="answer-add">
-                            <input placeholder="Schreiben mal hier">
-                            <span class="answer-btn answer-btn-2"></span>
-                        </div>
-                    </div>
-                </div>
+<body ng-controller="SheetIds">
+    <md-toolbar md-scroll-shrink="">
+        <div class="md-toolbar-tools">Sprachroboter</div>
+    </md-toolbar>
+
+    <md-card>
+        <md-card-content>
+            <div layout="row">
+                <span>Wählen Sie einen Roboter aus, mit dem Sie sprechen möchten</span>
             </div>
-        </div>
-    </div>
+            <div layout="row">
+                <md-select ng-model="selectedSheetId" placeholder="Roboter" class="md-no-underline" ng-change="sheetIdSelection()">
+                    <md-option ng-repeat="sheetId in sheetIds" value="{{sheetId.id}}">{{sheetId.name}}</md-option>
+                </md-select>
+            </div>
+        </md-card-content>
+
+        <md-content>
+            <md-list flex>
+                <md-subheader class="md-no-sticky">Unsere Unterhaltung</md-subheader>
+                <md-list-item class="md-2-line" ng-repeat="item in chat" ng-click="null">
+                    <div class="md-list-item-text" layout="column" layout-align="center {{item.wer === 'Roboter' ? 'end' : ''}}">
+                        <h3>{{item.wer}}</h3>
+                        <p>{{item.was}}</p>
+                    </div>
+                </md-list-item>
+            </md-list>
+        </md-content>
+        <md-input-container>
+            <form ng-submit="ask()" >
+                <label>Fragen sie</label>
+                <input ng-model="question" autocomplete="off">
+            </form>
+        </md-input-container>
+    </md-card>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.9/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-animate/1.7.9/angular-animate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-aria/1.7.9/angular-aria.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.21/angular-material.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

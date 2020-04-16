@@ -2,14 +2,16 @@ package com.deutscheroboter.googlesheets;
 
 import com.deutscheroboter.utils.RestService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpClientErrorException;
 
 
 @Service
 public class SheetsReader {
-
-    private static final String API_KEY = "AIzaSyC9zfFRlNLqFDvim3RqhvHFmn09qD8TGDw";
+    
+    @Value("${GOOGLE_API_KEY}")
+    private String apiKey;
 
     @Autowired
     private RestService restService;
@@ -19,7 +21,7 @@ public class SheetsReader {
                 "https://sheets.googleapis.com/v4/spreadsheets/%s/values/%s?key=%s",
                 spreadSheetId,
                 range,
-                API_KEY
+                apiKey
                 );
         return restService.get(url);
     }
