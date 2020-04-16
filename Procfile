@@ -1,1 +1,1 @@
-web: java -jar build/libs/deutsche-siri-1.0.jar
+web: java -jar build/libs/sprachroboter-1.0.jar
