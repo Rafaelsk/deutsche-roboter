@@ -1,10 +1,12 @@
+host = 'https://sprache-roboter.herokuapp.com'
+
 app = angular.module('Robot', ['ngMaterial'])
 
 app.controller('SheetIds', function($scope, $http) {
 
     $scope.chat = []
 
-    $http.get('http://localhost:5000/sheetIds').
+    $http.get(host + '/sheetIds').
         then(function(response) {
             $scope.sheetIds = response.data;
         });
@@ -17,7 +19,7 @@ app.controller('SheetIds', function($scope, $http) {
         });
 
 
-        $http.post('http://localhost:5000/answer/' + $scope.selectedSheetId, {'question': $scope.question})
+        $http.post(host + '/answer/' + $scope.selectedSheetId, {'question': $scope.question})
             .then(function(response) {
                 $scope.chat.push({
                     "wer": "Roboter",
